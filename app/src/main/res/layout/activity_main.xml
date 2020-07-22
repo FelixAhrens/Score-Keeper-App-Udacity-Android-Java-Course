@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_golf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="@string/player_one"
+                android:textColor="#FEFCFC"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/player_one_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="#FEFCFC"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/player_one_score"
+                    android:layout_toRightOf="@id/player_one_score"
+                    android:text="@string/score"
+                    android:textColor="#FEFCFC" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/player_one_hole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="#FEFCFC"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/player_one_hole"
+                    android:layout_toRightOf="@id/player_one_hole"
+                    android:text="@string/hole"
+                    android:textColor="#FEFCFC" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addOnePointForOne"
+                android:text="@string/_1"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addTwoPointsForOne"
+                android:text="@string/_2"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addThreePointsForOne"
+                android:text="@string/_3"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addFourPointsForOne"
+                android:text="@string/_4"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addFivePointsForOne"
+                android:text="@string/_5"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addSixPointsForOne"
+                android:text="@string/_6"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addSevenPointsForOne"
+                android:text="@string/fail"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="@string/player_two"
+                android:textColor="#FEFCFC"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/player_two_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="#FEFCFC"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/player_two_score"
+                    android:layout_toRightOf="@id/player_two_score"
+                    android:text="@string/score"
+                    android:textColor="#FEFCFC" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/player_two_hole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="0"
+                    android:textColor="#FEFCFC"
+                    android:textSize="56sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/player_two_hole"
+                    android:layout_toRightOf="@id/player_two_hole"
+                    android:text="@string/hole"
+                    android:textColor="#FEFCFC" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addOnePointForTwo"
+                android:text="@string/_1"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addTwoPointsForTwo"
+                android:text="@string/_2"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addThreePointsForTwo"
+                android:text="@string/_3"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addFourPointsForTwo"
+                android:text="@string/_4"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addFivePointsForTwo"
+                android:text="@string/_5"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addSixPointsForTwo"
+                android:text="@string/_6"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="34dp"
+                android:onClick="addSevenPointsForTwo"
+                android:text="@string/fail"
+                android:textColor="#FEFCFC"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="18dp"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textColor="#FEFCFC"
+        android:textSize="20sp" />
+</RelativeLayout>
